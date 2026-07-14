@@ -4,7 +4,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-discord_bot = os.environ.get(DISCORD_BOT) 
+discord_bot = os.environ.get('DISCORD_BOT') 
 
 # Initialize the bot
 intents = discord.Intents.default()
