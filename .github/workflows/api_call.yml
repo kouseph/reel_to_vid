@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     environment: prod
 
-  steps:
-    - name: Run bot
-      env:
-        DISCORD_BOT: ${{ secrets.DISCORD_BOT }}
-      run: python bot.py
+    steps:
+      - name: Run bot
+        env:
+          DISCORD_BOT: ${{ secrets.DISCORD_BOT }}
+        run: python bot.py
