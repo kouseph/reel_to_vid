@@ -1,5 +1,4 @@
-name: Make Secure API Call
-
+name: run discord bot with token
 on:
   push:
     branches: [ main ]
@@ -7,10 +6,10 @@ on:
 jobs:
   call-api:
     runs-on: ubuntu-latest
-  environment: prod
+    environment: prod
 
   steps:
     - name: Run bot
       env:
         API_TOKEN: ${{ secrets.DISCORD_BOT }}
-        run: python bot.py
+      run: python bot.py
