@@ -1,0 +1,16 @@
+name: Make Secure API Call
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+  environment: prod
+
+  steps:
+    - name: Run bot
+      env:
+        API_TOKEN: ${{ secrets.DISCORD_BOT }}
+        run: python bot.py
